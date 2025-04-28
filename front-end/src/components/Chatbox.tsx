@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './ChatBox.css';
+import ChatInput from './ChatInput';
+import MessageBubble from './MessageBubble';
 
-type Message = {
+export type Message = {
   text: string;
   sender: 'user' | 'bot';
   timestamp?: Date;
@@ -39,34 +40,14 @@ const ChatBox: React.FC = () => {
   }, [messages]);
 
   return (
-    <div className="chat-container">
-      <div className="messages-container">
+    <div className="flex flex-col justify-end w-128 h-10/12 rounded-2xl overflow-hidden shadow-x1 font-sans">
+      <div className="flex-1 p-4 overflow-y-auto">
         {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.sender}`}>
-            <div className="message-text">{msg.text}</div>
-            <div className="message-time">
-              {msg.timestamp?.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-            </div>
-          </div>
+          <MessageBubble msg={msg} index={index} />
         ))}
         <div ref={messagesEndRef} />
       </div>
-
-      <div className="input-container">
-        <input
-          type="text"
-          value={newMessage}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewMessage(e.target.value)}
-          placeholder="Digite sua mensagem..."
-          onKeyPress={(e: React.KeyboardEvent) => e.key === 'Enter' && handleSend()}
-        />
-        <button onClick={handleSend}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-      </div>
+        <ChatInput newMessage={newMessage} setNewMessage={setNewMessage} handleSend={handleSend}/>
     </div>
   );
 };
