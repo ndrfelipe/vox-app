@@ -12,11 +12,11 @@ export const sendMessageToChatbot = async (message: string): Promise<string>  =>
       });
 
       const data = await response.json();
-      return data.text; // resposta do chatbot
+      return data.text || "Desculpe, não consegui entender sua mensagem."; // resposta do chat
       
     } catch (error) {
       console.error("Erro ao enviar mensagem para o chatbot:", error);
-      return "Desculpe, algo deu errado. Tente novamente.";
+      return  "Desculpe, houve um erro ao se comunicar com o servidor.";
     }
   };
   

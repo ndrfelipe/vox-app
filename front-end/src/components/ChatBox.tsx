@@ -1,12 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import ChatInput from "./ChatInput";
 import MessageBubble from "./MessageBubble";
-import { sendMessageToChatbot } from "../services/chatbotService";
+
 import VoxLogo from "/vox-logo.png";
 import MapAndContactICon from "/map-and-contact-icon.png";
-import complaintIcon from "/complaint-icon.png";
-import shieldIcon from "/shield-icon.png";
-import lawIcon from "/law-icon.png"
 import ReadyQuestion from "./ReadyQuestion";
 
 export type Message = {
@@ -21,7 +18,7 @@ const ChatBox: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [botIsActive, setBotIsActive] = useState(false);
 
-  const handleSendSubmit = async (): Promise<void> => {
+  const handleSend = (): void => {
     if (newMessage.trim() === "") return;
 
     const userMessage: Message = {
@@ -34,24 +31,14 @@ const ChatBox: React.FC = () => {
     setNewMessage("");
     setBotIsActive(true);
 
-    try {
-      const botText = await sendMessageToChatbot(newMessage);
+    setTimeout(() => {
       const botMessage: Message = {
-        text: botText,
+        text: "Obrigado pela sua mensagem! Como posso ajudar?",
         sender: "bot",
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, botMessage]);
-
-    }
-    catch(error){
-      const fallbackMessage: Message = {
-        text: "Desculpe, algo deu errado ao tentar me comunicar com o servidor.",
-        sender: "bot",
-        timestamp: new Date(),
-      }
-      setMessages((prev) => [...prev, fallbackMessage]);
-    }
+    }, 1000);
   };
 
   useEffect(() => {
@@ -59,9 +46,9 @@ const ChatBox: React.FC = () => {
   }, [messages]);
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-between w-[70%] h-screen pb-5 pt-20">
+    <div className="flex flex-col flex-1 items-center justify-between w-[70%] h-screen pb-5">
       {!botIsActive && (
-        <div className="flex flex-col justify-end items-center text-center gap-10 pt-12">
+        <div className="flex flex-col justify-end items-center text-center gap-10 pt-5">
           <div className="flex flex-col justify-center items-center">
             <img className="w-[100px]" src={VoxLogo} alt="" />
             <h1 className="text-[32px] font-bold text-transparent bg-gradient-to-r from-[#1E3A8A] to-[#080F24] bg-clip-text">
@@ -74,16 +61,24 @@ const ChatBox: React.FC = () => {
               icon={MapAndContactICon}
             />
             <ReadyQuestion
-              question="Saiba como se manter em segurança!"
-              icon={complaintIcon}
+              question="Entre em contato ou encontre a unidade mais perto de você"
+              icon={MapAndContactICon}
             />
             <ReadyQuestion
-              question="Saiba como se manter em segurança!"
-              icon={shieldIcon}
+              question="Entre em contato ou encontre a unidade mais perto de você"
+              icon={MapAndContactICon}
             />
             <ReadyQuestion
-              question="Saiba todas as atividades licenciadas da Polícia Civil de Pernambuco"
-              icon={lawIcon}
+              question="Entre em contato ou encontre a unidade mais perto de você"
+              icon={MapAndContactICon}
+            />
+            <ReadyQuestion
+              question="Entre em contato ou encontre a unidade mais perto de você"
+              icon={MapAndContactICon}
+            />
+            <ReadyQuestion
+              question="Entre em contato ou encontre a unidade mais perto de você"
+              icon={MapAndContactICon}
             />
           </div>
         </div>
@@ -101,7 +96,7 @@ const ChatBox: React.FC = () => {
       <ChatInput
         newMessage={newMessage}
         setNewMessage={setNewMessage}
-        handleSend={handleSendSubmit}
+        handleSend={handleSend}
       />
     </div>
   );

@@ -1,14 +1,19 @@
+import Chatbox from "./components/ChatBox";
+import Sidebar, { SidebarItem } from "./components/Sidebar";
 
-import ChatBox from './components/Chatbox';
-  
-function App() {
+export default function App() {
   return (
-    <div className="app">
-      <div style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}>
-        <ChatBox />
-      </div>
+    <div className="flex ">
+      <Sidebar>
+        <SidebarItem
+          icon={<i className="fas fa-home"></i>}
+          text="Inicio"
+          active
+        />
+        <SidebarItem icon={<i className="fas fa-user"></i>} text="Histórico" />
+      </Sidebar>
+      <Chatbox />
     </div>
   );
 }
 
-export default App;
