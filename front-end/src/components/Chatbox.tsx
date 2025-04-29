@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ChatBox.css';
+import { sendMessageToChatbot } from '../services/chatbotService';
 
 type Message = {
   text: string;
@@ -7,12 +8,15 @@ type Message = {
   timestamp?: Date;
 };
 
+
+
+
 const ChatBox: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [newMessage, setNewMessage] = useState<string>('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const handleSend = (): void => {
+  const handleSend = async (): Promise<void> => {
     if (newMessage.trim() === '') return;
 
     const userMessage: Message = {
@@ -22,16 +26,19 @@ const ChatBox: React.FC = () => {
     };
 
     setMessages(prev => [...prev, userMessage]);
+    const userInput = newMessage;
     setNewMessage('');
 
-    setTimeout(() => {
-      const botMessage: Message = {
-        text: 'Obrigado pela sua mensagem! Como posso ajudar?',
-        sender: 'bot',
-        timestamp: new Date()
-      };
-      setMessages(prev => [...prev, botMessage]);
-    }, 1000);
+    // Chamada para a API fake
+    const botResponseText = await sendMessageToChatbot(userInput);
+
+    const botMessage: Message = {
+      text: botResponseText,
+      sender: 'bot',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, botMessage]);
   };
 
   useEffect(() => {
@@ -58,10 +65,10 @@ const ChatBox: React.FC = () => {
           value={newMessage}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewMessage(e.target.value)}
           placeholder="Digite sua mensagem..."
-          onKeyPress={(e: React.KeyboardEvent) => e.key === 'Enter' && handleSend()}
+          onKeyDown={(e: React.KeyboardEvent) => e.key === 'Enter' && handleSend()}
         />
         <button onClick={handleSend}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round"/>
             <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
