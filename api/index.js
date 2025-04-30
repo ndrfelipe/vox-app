@@ -19,6 +19,15 @@ app.post('/chat', (req, res) => {
   const user = conversationState[sender_id];
   let response = "Desculpe, não entendi sua pergunta.";
 
+    // RESPOSTAS DOS BOTÕES RÁPIDOS
+    if (msg.includes("entre em contato") || msg.includes("encontre a unidade")) {
+      response = "Você pode entrar em contato através do número 197 (Disque Denúncia) ou procurar a delegacia mais próxima. Deseja ver no mapa?";
+    } else if (msg.includes("como se manter em segurança")) {
+      response = "Mantenha-se em locais iluminados, evite andar sozinho à noite e denuncie qualquer atitude suspeita. Se estiver em perigo, ligue 190 imediatamente.";
+    } else if (msg.includes("atividades licenciadas")) {
+      response = "As atividades licenciadas incluem segurança privada, transporte de valores, escolta armada e outras. Você pode consultar a lista completa no site oficial da Polícia Civil de Pernambuco.";
+    }
+  
   // JORNADA 1: Como registrar um BO
   if (msg.includes("bo") || msg.includes("ocorrência")) {
     user.context = "registrar_bo";
