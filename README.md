@@ -298,7 +298,7 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 ## ## :clapper: Acesse o nosso deploy: [Acessar](https://vox-app-51bk.vercel.app/)
 <p align="left">
   <img src="https://github.com/user-attachments/assets/c67ff1dd-2281-41fb-8faf-3c8b514f66a7" alt="" width="500"/>
-</p
+</p>
 
 
 ## Desenvolvido por 
