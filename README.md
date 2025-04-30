@@ -280,8 +280,10 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 <p>Essa prática foi aplicada por Alan e Victor durante o desenvolvimento dos componentes Chatbox.jsx, Sidebar.jsx e na correção de bugs. Nesse período, ambos colaboraram ativamente, alternando entre os papéis de "piloto" (quem codifica) e "navegador" (quem revisa e orienta), o que contribuiu para a melhoria da qualidade do código e para a rápida resolução de problemas.
 </p>
 
-##Issues
-
+## Issues
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/aee7bc27-45c7-4f0c-a4ce-4895e4c2ebdc" alt="Diagrama de Atividades" width="1000"/>
+</p>
 
 ## Desenvolvido por 
 - André Felipe
