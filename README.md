@@ -290,6 +290,7 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
   <img src="https://github.com/user-attachments/assets/21889bc5-c82b-4190-8595-bf7652edd159" alt="Diagrama de Atividades" width="1000"/>
 </p>
 
+## ## :clapper: Acesso o nosso Screencast: [Acessar](https://www.youtube.com/watch?v=dYaQlzmpiYk)
 
 ## Desenvolvido por 
 - André Felipe
