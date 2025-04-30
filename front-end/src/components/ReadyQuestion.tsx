@@ -1,13 +1,19 @@
-export default function ReadyQuestion({
-  question,
-  icon,
-}: {
+type ReadyQuestionsProps = {
   question: string;
   icon: string;
-}) {
-  return (
-    <div className="bg-white flex gap-10 items-center text-left rounded-[8px] shadow-xl p-1 py-2">
-      <p className="ml-2 font-medium">{question}</p> <img className="w-[48px]" src={icon} />
-    </div>
+  onClick: (message:string) => void;
+};
+
+const ReadyQuestion: React.FC<ReadyQuestionsProps> = ({question, icon, onClick}) => {  
+  return(
+    <button
+      onClick={() => onClick(question)}
+      className="flex items-center gap-3 p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition w-full text-left"
+    >
+      <img src={icon} alt="ícone" className="w-6 h-6" />
+      <span className="font-medium text-sm">{question}</span>
+    </button>
   );
-}
+};
+
+export default ReadyQuestion;

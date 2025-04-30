@@ -64,11 +64,13 @@ export function SidebarItem({
   text,
   active,
   alert,
+  onClick
 }: {
   icon: ReactNode;
   text: string;
   active?: boolean;
   alert?: boolean;
+  onClick?: () => void;
 }) {
   const context = useContext(SidebarContext);
 
@@ -82,6 +84,7 @@ export function SidebarItem({
 
   return (
     <li
+      onClick={onClick}
       className={`
         relative flex items-center py-2 px-3 my-1
         font-medium rounded-md cursor-pointer

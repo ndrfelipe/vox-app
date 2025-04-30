@@ -1,22 +1,37 @@
-const API_URL = "http://localhost:4000/chat";
+export async function sendMessageToChatbot(message: string, senderId = "default-user") {
+  try {
+    const response = await fetch("http://localhost:4000/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message, sender_id: senderId }),
+    });
 
-export const sendMessageToChatbot = async (message: string): Promise<string>  => {
-
-    try {
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message }),
-      });
-
-      const data = await response.json();
-      return data.text || "Desculpe, não consegui entender sua mensagem."; // resposta do chat
-      
-    } catch (error) {
-      console.error("Erro ao enviar mensagem para o chatbot:", error);
-      return  "Desculpe, houve um erro ao se comunicar com o servidor.";
+    if (!response.ok) {
+      throw new Error("Erro ao enviar mensagem para o chatbot.");
     }
-  };
-  
+
+    const data = await response.json();
+    return data.text;
+  } catch (error) {
+    console.error("Erro ao enviar mensagem:", error);
+    return "Erro de comunicação com o servidor.";
+  }
+}
+
+export async function fetchChatHistory(senderId = "default-user") {
+  try {
+    const response = await fetch(`http://localhost:4000/history/${senderId}`);
+
+    if (!response.ok) {
+      throw new Error("Erro ao buscar histórico.");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Erro ao buscar histórico:", error);
+    return [];
+  }
+}

@@ -1,30 +1,35 @@
-import Chatbox from "./components/Chatbox";
+import { useState } from "react";
+import Chatbox from "./components/ChatBox";
 import Sidebar, { SidebarItem } from "./components/Sidebar";
-import FontSizeControls from "./components/FontSize";
-import { useState } from 'react';
+import HistoryPanel from "./components/HistoryPanel";
 
-const App: React.FC = () => {
-    const [isLarge, setIsLarge] = useState(false);
+export default function App() {
 
-    return (
-        <div className={`flex ${isLarge ? 'text-xl [&_button]:text-xl [&_input]:text-xl [&_textarea]:text-xl' : 'text-base'}`}>
-            <Sidebar>
-                <SidebarItem
-                    icon={<i className="fas fa-home"></i>}
-                    text="Inicio"
-                    active
-                />
-                <SidebarItem 
-                    icon={<i className="fas fa-user"></i>} 
-                    text="Histórico" 
-                />
-            </Sidebar>
-            <Chatbox />
-            <FontSizeControls 
-                onSizeChange={setIsLarge} 
-            />
-        </div>
-    );
-};
+  const [activeView, setActiveView] = useState("chat");
 
-export default App;
+  return (
+    <div className="flex">
+      <Sidebar>
+        <SidebarItem
+          icon={<i className="fas fa-home"></i>}
+          text="Inicio"
+          active={activeView === "chat"}
+          onClick={() => setActiveView("chat")}
+        />
+
+        <SidebarItem
+         icon={<i className="fas fa-user"></i>}
+          text="Histórico"
+          active={activeView === "history"}
+          onClick={() => setActiveView("history")}
+        />
+      </Sidebar>
+
+
+        {activeView === "chat" && <Chatbox />}
+        {activeView === "history" && <HistoryPanel senderId="usuario1" />}
+
+    </div>
+  );
+}
+        
