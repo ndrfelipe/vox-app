@@ -88,22 +88,22 @@ const ChatBox: React.FC = () => {
     {
       question: "Entre em contato ou encontre a unidade mais perto de você",
       icon: MapAndContactICon,
-      onclick: handleQuickQuestion,
+      onClick: handleQuickQuestion,
     },
     {
       question: "Saiba todas as atividades licenciadas da Polícia Civil de Pernambuco",
       icon: complaintIcon,
-      onclick: handleQuickQuestion,
+      onClick: handleQuickQuestion,
     },
     {
       question: "Saiba como se manter em segurança!",
       icon: shieldIcon,
-      onclick: handleQuickQuestion,
+      onClick: handleQuickQuestion,
     },
     {
       question: "Agende um atendimento",
       icon: lawIcon,
-      onclick: handleQuickQuestion,
+      onClick: handleQuickQuestion,
     },
   ];
 
@@ -139,7 +139,7 @@ const ChatBox: React.FC = () => {
                 question={obj.question}
                 icon={obj.icon}
                 key={key}
-                onClick={obj.onclick}
+                onClick={obj.onClick}
               />
             ))}
           </div>
