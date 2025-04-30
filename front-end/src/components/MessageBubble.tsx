@@ -1,4 +1,4 @@
-import type { Message } from "./ChatBox";
+import type { Message } from "./Chatbox";
 
 export default function MessageBubble({
   index,
