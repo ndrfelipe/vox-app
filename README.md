@@ -274,7 +274,14 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 ## 📌 Diagrama de Atividades
 <p align="center">
   <img src="https://github.com/user-attachments/assets/7d0b2310-8115-417b-b1ee-8c38c6d2d3d5" alt="Diagrama de Atividades" width="300"/>
-</p
+</p>
+
+## Programação em Par experimentada
+<p>Essa prática foi aplicada por Alan e Victor durante o desenvolvimento dos componentes Chatbox.jsx, Sidebar.jsx e na correção de bugs. Nesse período, ambos colaboraram ativamente, alternando entre os papéis de "piloto" (quem codifica) e "navegador" (quem revisa e orienta), o que contribuiu para a melhoria da qualidade do código e para a rápida resolução de problemas.
+</p>
+
+##Issues
+
 
 ## Desenvolvido por 
 - André Felipe
