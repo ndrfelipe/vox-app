@@ -285,6 +285,12 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
   <img src="https://github.com/user-attachments/assets/aee7bc27-45c7-4f0c-a4ce-4895e4c2ebdc" alt="Diagrama de Atividades" width="1000"/>
 </p>
 
+## Trello Atualizado
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/21889bc5-c82b-4190-8595-bf7652edd159" alt="Diagrama de Atividades" width="1000"/>
+</p>
+
+
 ## Desenvolvido por 
 - André Felipe
 <p align="left">
