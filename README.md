@@ -292,6 +292,9 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 
 ## ## :clapper: Acesso o nosso Screencast: [Acessar](https://www.youtube.com/watch?v=dYaQlzmpiYk)
 
+## ## :clapper: Acesse o nosso deploy: [Acessar](https://vox-app-51bk.vercel.app/)
+
+
 ## Desenvolvido por 
 - André Felipe
 <p align="left">
