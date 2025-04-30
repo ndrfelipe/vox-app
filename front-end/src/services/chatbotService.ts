@@ -1,6 +1,6 @@
 export async function sendMessageToChatbot(message: string, senderId = "default-user") {
   try {
-    const response = await fetch("http://localhost:4000/chat", {
+    const response = await fetch("http://localhost:3001/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export async function sendMessageToChatbot(message: string, senderId = "default-
 
 export async function fetchChatHistory(senderId = "default-user") {
   try {
-    const response = await fetch(`http://localhost:4000/history/${senderId}`);
+    const response = await fetch(`http://localhost:3001/history/${senderId}`);
 
     if (!response.ok) {
       throw new Error("Erro ao buscar histórico.");

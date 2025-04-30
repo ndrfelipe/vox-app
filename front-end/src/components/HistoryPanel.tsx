@@ -19,7 +19,7 @@ export default function HistoryPanel({ senderId }: HistoryPanelProps) {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/history/${senderId}`);
+        const response = await axios.get(`http://localhost:3001/history/${senderId}`);
         setHistory(response.data);
       } catch (err) {
         setError("Erro ao buscar histórico.");
