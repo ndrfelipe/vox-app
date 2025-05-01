@@ -279,6 +279,11 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 ## Programação em Par experimentada
 <p>Essa prática foi aplicada por Alan e Victor durante o desenvolvimento dos componentes Chatbox.jsx, Sidebar.jsx e na correção de bugs. Nesse período, ambos colaboraram ativamente, alternando entre os papéis de "piloto" (quem codifica) e "navegador" (quem revisa e orienta), o que contribuiu para a melhoria da qualidade do código e para a rápida resolução de problemas.
 </p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/abbc6174-126b-4bc9-8244-628e7e88d0a3" alt="" width="1000"/>
+</p>
+
+
 
 ## Issues
 <p align="center">
