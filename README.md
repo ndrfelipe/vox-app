@@ -293,7 +293,7 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 ## ## :clapper: Acesso o nosso Screencast: [Acessar](https://www.youtube.com/watch?v=dYaQlzmpiYk)
 <p align="left">
   <img src="https://github.com/user-attachments/assets/e3f0b963-adae-4033-b7e8-4524974e73b2" alt="" width="500"/>
-</p
+</p>
 
 ## ## :clapper: Acesse o nosso deploy: [Acessar](https://vox-app-51bk.vercel.app/)
 <p align="left">
