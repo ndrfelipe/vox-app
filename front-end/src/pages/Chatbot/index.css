@@ -14,8 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
-  background-image: url("../public/assets/background.jpg");
-  background-size: cover;
-  position: relative;
+  min-height: 100vh;
+}
+
+body #chatbot-page{
+    background-image: url("../public/assets/background.jpg");
+    background-size: cover;
+    position: relative;
 }
