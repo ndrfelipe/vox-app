@@ -271,20 +271,55 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 
 ## :clapper: Acesso o nosso Screencast: [Acessar](https://youtu.be/VS1usrmIDBk)
 
+## 📌 Diagrama de Atividades
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7d0b2310-8115-417b-b1ee-8c38c6d2d3d5" alt="Diagrama de Atividades" width="300"/>
+</p>
+
+## Programação em Par experimentada
+<p>Essa prática foi aplicada por Alan e Victor durante o desenvolvimento dos componentes Chatbox.jsx, Sidebar.jsx e na correção de bugs. Nesse período, ambos colaboraram ativamente, alternando entre os papéis de "piloto" (quem codifica) e "navegador" (quem revisa e orienta), o que contribuiu para a melhoria da qualidade do código e para a rápida resolução de problemas.
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/abbc6174-126b-4bc9-8244-628e7e88d0a3" alt="" width="200"/>
+</p>
+
+
+
+## Issues
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/aee7bc27-45c7-4f0c-a4ce-4895e4c2ebdc" alt="Diagrama de Atividades" width="1000"/>
+</p>
+
+## Trello Atualizado
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/21889bc5-c82b-4190-8595-bf7652edd159" alt="Diagrama de Atividades" width="1000"/>
+</p>
+
+## ## :clapper: Acesso o nosso Screencast: [Acessar](https://www.youtube.com/watch?v=dYaQlzmpiYk)
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/e3f0b963-adae-4033-b7e8-4524974e73b2" alt="" width="500"/>
+</p>
+
+## ## :clapper: Acesse o nosso deploy: [Acessar](https://vox-app-51bk.vercel.app/)
+<p align="left">
+  <img src="https://github.com/user-attachments/assets/c67ff1dd-2281-41fb-8faf-3c8b514f66a7" alt="" width="500"/>
+</p>
+
+
 ## Desenvolvido por 
 - André Felipe
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/f02f82af-ee7e-493d-9a39-fbf12901c370" alt="Apresentação Vox" width="250"/>
+  <img src="https://github.com/user-attachments/assets/f02f82af-ee7e-493d-9a39-fbf12901c370" alt="Foto do desenvolvedor André Felipe" width="250"/>
 </p
   
 - Victor Ferreira
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/5d28ef37-5a7e-45fe-9fea-77e7fa05d175" alt="Apresentação Vox" width="250"/>
+  <img src="https://github.com/user-attachments/assets/5d28ef37-5a7e-45fe-9fea-77e7fa05d175" alt="Foto do desenvolvedor Victor Ferreira" width="250"/>
 </p
 
 - Alan Vitor
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/22de2ba7-a922-472a-8178-06e4f6377b35" alt="Apresentação Vox" width="250"/>
+  <img src="https://github.com/user-attachments/assets/22de2ba7-a922-472a-8178-06e4f6377b35" alt="Foto do desenvolvedor Alan Vitor" width="250"/>
 </p
 
 
