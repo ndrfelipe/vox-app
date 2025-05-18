@@ -1,55 +1,77 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 
-interface Message {
-  sender: "user" | "bot";
-  text: string;
-  timestamp: string;
-}
+const conversasMock = [
+  {
+    id: 1,
+    data: "2025-05-15",
+    resumo: "Consulta sobre agendamento",
+    mensagens: [
+      "Olá, como posso agendar um atendimento?",
+      "Você pode agendar pela seção 'Agendar'.",
+    ],
+  },
+  {
+    id: 2,
+    data: "2025-05-14",
+    resumo: "Denúncia anônima",
+    mensagens: [
+      "Gostaria de fazer uma denúncia anônima.",
+      "Claro, você pode usar a aba 'Denunciar'.",
+    ],
+  },
+  {
+    id: 3,
+    data: "2025-05-13",
+    resumo: "Informação sobre documentos",
+    mensagens: [
+      "Quais documentos preciso levar para a delegacia?",
+      "RG e comprovante de residência são suficientes na maioria dos casos.",
+    ],
+  },
+];
 
-interface HistoryPanelProps {
-  senderId: string;
-}
+export default function HistoryPanel({ senderId }) {
+  const [conversaSelecionada, setConversaSelecionada] = useState(null);
 
-export default function HistoryPanel({ senderId }: HistoryPanelProps) {
-  const [history, setHistory] = useState<Message[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    const fetchHistory = async () => {
-      try {
-        const response = await axios.get(`http://localhost:3001/history/${senderId}`);
-        setHistory(response.data);
-      } catch (err) {
-        setError("Erro ao buscar histórico.");
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchHistory();
-  }, [senderId]);
-
-  if (loading) return <p className="p-4">Carregando histórico...</p>;
-  if (error) return <p className="p-4 text-red-500">{error}</p>;
+  if (conversaSelecionada) {
+    return (
+      <div className="p-3 h-full overflow-y-auto">
+        <button
+          className="text-blue-600 mb-3 hover:underline"
+          onClick={() => setConversaSelecionada(null)}
+        >
+          ← Voltar ao histórico
+        </button>
+        <h2 className="text-lg font-bold mb-2">{conversaSelecionada.resumo}</h2>
+        <div className="text-sm text-gray-500 mb-4">{conversaSelecionada.data}</div>
+        <div className="space-y-3">
+          {conversaSelecionada.mensagens.map((msg, index) => (
+            <div
+              key={index}
+              className={`p-2 rounded border ${
+                index % 2 === 0 ? "bg-gray-100 text-left" : "bg-blue-100 text-right"
+              }`}
+            >
+              {msg}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="p-4 w-full">
-      <h2 className="text-xl font-bold mb-4">Histórico de Conversas</h2>
+    <div className="p-3 overflow-y-auto h-full">
+      <h2 className="text-lg font-semibold mb-3 text-gray-700">Histórico de Conversas</h2>
       <ul className="space-y-2">
-        {history.map((msg, index) => (
+        {conversasMock.map((conversa) => (
           <li
-            key={index}
-            className={`p-3 rounded shadow w-fit max-w-[80%] ${
-              msg.sender === "user" ? "bg-blue-100 self-end ml-auto" : "bg-gray-100"
-            }`}
+            key={conversa.id}
+            className="bg-white border rounded p-2 shadow-sm hover:bg-gray-100 cursor-pointer"
+            onClick={() => setConversaSelecionada(conversa)}
           >
-            <p className="text-sm text-gray-700">{msg.text}</p>
-            <span className="block text-xs text-gray-400 mt-1">
-              {new Date(msg.timestamp).toLocaleString("pt-BR")}
-            </span>
+            <div className="text-sm text-gray-600">{conversa.data}</div>
+            <div className="text-base text-gray-800">{conversa.resumo}</div>
           </li>
         ))}
       </ul>

@@ -1,4 +1,5 @@
 import { useContext, createContext, useState, ReactNode } from "react";
+import VoxLogo from "/vox-logo.png";
 
 interface SidebarContextType {
   expanded: boolean;
@@ -16,10 +17,18 @@ export default function Sidebar({ children }: { children: ReactNode }) {
           <img
             src="../../public/policiaLogo.png"
             className={`overflow-hidden transition-all ${
-              expanded ? "w-16" : "w-0"
+              expanded ? "w-12" : "w-0"
             }`}
             alt="Logotipo da Polícia Civil de Pernambuco"
           />
+          <img
+            src={VoxLogo}
+            className={`overflow-hidden transition-all  ${
+              expanded ? "w-12  mr-25" : "w-0"
+            }`}
+            alt="Logotipo da Polícia Civil de Pernambuco"
+          />
+
           <button
             onClick={() => setExpanded((curr) => !curr)}
             className="p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100"
@@ -30,6 +39,7 @@ export default function Sidebar({ children }: { children: ReactNode }) {
               <i className="fas fa-chevron-right"></i>
             )}
           </button>
+
         </div>
 
         <SidebarContext.Provider value={{ expanded }}>

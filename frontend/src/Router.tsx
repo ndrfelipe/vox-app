@@ -4,8 +4,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import {DefaultLayout} from "./layouts/DefaultLayout/DefaultLayout";
 
-
-
 export function Router(){
     return (
         <Routes>
