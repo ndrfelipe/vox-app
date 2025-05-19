@@ -37,7 +37,7 @@ export default function Chatbot() {
   };
 
   return (
-    <div id="chatbot-page" className="flex">
+    <div className="flex bg-[linear-gradient(to_bottom,_#08101A_0%,_#182A56_77%,_#1E3A8A_100%)]">
       <Sidebar>
         {activeView === "history" ? (
           <div className="p-4 overflow-y-auto h-full">

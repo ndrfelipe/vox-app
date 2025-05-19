@@ -12,10 +12,10 @@ export default function Sidebar({ children }: { children: ReactNode }) {
 
   return (
     <aside className="h-screen z-1000">
-      <nav className="h-full flex flex-col bg-[#3B82F6] border-r shadow-sm">
+      <nav className="flex flex-col items-center justify-between py-3 px-5 bg-[rgba(10,10,10,0.25)] h-full backdrop-blur-md rounded-[10px] border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]">
         <div className="p-4 pb-2 flex justify-between items-center">
           <img
-            src="../../public/policiaLogo.png"
+            src="/policiaLogo.png"
             className={`overflow-hidden transition-all ${
               expanded ? "w-12" : "w-0"
             }`}
@@ -31,7 +31,7 @@ export default function Sidebar({ children }: { children: ReactNode }) {
 
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100"
+            className="p-1.5 rounded-lg border border-gray-700 text-white cursor-pointer hover:bg-gray-900 "
           >
             {expanded ? (
               <i className="fas fa-chevron-left"></i>
@@ -94,10 +94,12 @@ export function SidebarItem({
         relative flex items-center py-2 px-3 my-1
         font-medium rounded-md cursor-pointer
         transition-colors group
+        border
+        border-transparent
         ${
           active
-            ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-            : "hover:bg-indigo-50 text-gray-600"
+            ? "bg-gradient-to-tr from-blue-900 to-gray-900 text-white border-white"
+            : "hover:bg-gray-900 text-gray-600 hover:border hover:border-white"
         }
     `}
     >
@@ -121,7 +123,7 @@ export function SidebarItem({
         <div
           className={`
           absolute left-full rounded-md px-2 py-1 ml-6
-          bg-indigo-100 text-indigo-800 text-sm
+          bg-gray-700 border text-white text-sm
           invisible opacity-20 -translate-x-3 transition-all
           group-hover:visible group-hover:opacity-100 group-hover:translate-x-0
       `}

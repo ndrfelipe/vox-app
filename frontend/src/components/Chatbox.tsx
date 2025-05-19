@@ -88,7 +88,7 @@ const ChatBox: React.FC = () => {
         <div className="flex flex-col justify-end items-center text-center gap-10 pt-12">
           <div className="flex flex-col justify-center items-center">
             <img className="w-[80px] sm:w-[100px]" src={VoxLogo} alt="Vox Logo" />
-            <h1 className="text-[20px] sm:text-[32px] font-bold text-transparent bg-gradient-to-r from-[#1E3A8A] to-[#080F24] bg-clip-text text-center">
+            <h1 className="text-[20px] sm:text-[32px] font-bold text-white text-center text-shadow-sm">
               Olá, sou o Vox! <br /> O Assistente Virtual da Polícia Civil de Pernambuco
             </h1>
           </div>
@@ -114,8 +114,8 @@ const ChatBox: React.FC = () => {
       {/* Modal de avaliação */}
       {showRatingModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center ml-70">
-          <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md transform transition-transform duration-300 animate-fade-in">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">Avalie o Vox</h2>
+          <div className="bg-gray-700 rounded-2xl shadow-xl p-8 w-full max-w-md transform transition-transform duration-300 animate-fade-in">
+            <h2 className="text-2xl font-bold mb-4 text-gray-200">Avalie o Vox</h2>
             <div className="flex items-center space-x-2 mb-4">
               {[0,1,2,3,4].map(star => (
                 <button
@@ -130,13 +130,13 @@ const ChatBox: React.FC = () => {
               value={ratingComment}
               onChange={e => setRatingComment(e.target.value)}
               rows={4}
-              className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-shadow duration-300 shadow-sm hover:shadow-md"
+              className="w-full border text-white border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition-shadow duration-300 shadow-sm hover:shadow-md"
             />
             <div className="mt-6 flex justify-end space-x-4">
               <button onClick={() => setShowRatingModal(false)} className="cursor-pointer px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition">
                 Cancelar
               </button>
-              <button onClick={() => { /* TODO: enviar rating */ setShowRatingModal(false); }} className="cursor-pointer px-4 py-2 bg-yellow-400 text-white rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition">
+              <button onClick={() => { /* TODO: enviar rating */ setShowRatingModal(false); }} className="cursor-pointer px-4 py-2 bg-yellow-400 font-bold text-white rounded-lg hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition">
                 Enviar
               </button>
             </div>

@@ -19,7 +19,5 @@ body {
     font-family: Montserrat, sans-serif;
 }
 body #chatbot-page {
-    background-image: url("../public/assets/background.jpg");
-    background-size: cover;
     position: relative;
 }
