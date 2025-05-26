@@ -11,11 +11,11 @@ export default function ChatInput({
 }) {
   return (
     <>
-     <div className="flex flex-col sm:flex-row items-center gap-2 bg-white shadow-xl rounded-[16px] w-full max-w-[800px] px-4 py-2">
+     <div className="flex flex-col sm:flex-row items-center gap-2 bg-gray-900 shadow-xl rounded-[16px] w-full max-w-[800px] px-4 py-2">
   <input
     type="text"
     value={newMessage}
-    className="flex-1 w-full px-4 py-2 border-0 rounded-full outline-none text-sm sm:text-md bg-white"
+    className="flex-1 w-full px-4 py-2 border-0 rounded-full outline-none text-gray-200 text-sm sm:text-md bg-gray-900"
     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
       setNewMessage(e.target.value)
     }
@@ -27,7 +27,7 @@ export default function ChatInput({
   <button
     onClick={handleSend}
     type="button"
-    className="w-full sm:w-32 h-10 border-0 rounded-[16px] bg-gradient-to-r from-cyan-500 to-blue-500 text-white flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200"
+    className="w-full sm:w-32 h-10 border-0 rounded-[16px] bg-gradient-to-r from-cyan-900 to-blue-500 text-white flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200"
   >
     <i className="far fa-paper-plane"></i>
     Enviar

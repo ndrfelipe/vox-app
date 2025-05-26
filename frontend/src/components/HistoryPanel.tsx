@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 
-const conversasMock = [
+type Conversa = {
+  id: number;
+  data: string;
+  resumo: string;
+  mensagens: string[];
+};
+
+
+const conversasMock: Conversa[] = [
   {
     id: 1,
     data: "2025-05-15",
@@ -30,8 +38,9 @@ const conversasMock = [
   },
 ];
 
-export default function HistoryPanel({ senderId }) {
-  const [conversaSelecionada, setConversaSelecionada] = useState(null);
+export default function HistoryPanel({ senderId } : {senderId: number} ) {
+  const [conversaSelecionada, setConversaSelecionada] = useState<Conversa | null>(null);
+
 
   if (conversaSelecionada) {
     return (
@@ -47,7 +56,7 @@ export default function HistoryPanel({ senderId }) {
         <div className="space-y-3">
           {conversaSelecionada.mensagens.map((msg, index) => (
             <div
-              key={index}
+              key={msg}
               className={`p-2 rounded border ${
                 index % 2 === 0 ? "bg-gray-100 text-left" : "bg-blue-100 text-right"
               }`}
@@ -62,12 +71,12 @@ export default function HistoryPanel({ senderId }) {
 
   return (
     <div className="p-3 overflow-y-auto h-full">
-      <h2 className="text-lg font-semibold mb-3 text-gray-700">Histórico de Conversas</h2>
+      <h2 className="text-white text-lg font-semibold mb-3 ">Histórico de Conversas</h2>
       <ul className="space-y-2">
         {conversasMock.map((conversa) => (
           <li
             key={conversa.id}
-            className="bg-white border rounded p-2 shadow-sm hover:bg-gray-100 cursor-pointer"
+            className="bg-gray-900 text-white border rounded p-2 shadow-sm hover:bg-gray-100 cursor-pointer"
             onClick={() => setConversaSelecionada(conversa)}
           >
             <div className="text-sm text-gray-600">{conversa.data}</div>
