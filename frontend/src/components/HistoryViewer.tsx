@@ -1,13 +1,14 @@
-import React from "react";
+
 import MessageBubble from "./MessageBubble";
 import type { Message } from "./Chatbox";
 
 type Props = {
   messages: Message[];
-  onBack: () => void;
+  title?: string;
+  onBack?: () => void;
 };
 
-export default function HistoryViewer({ messages, onBack }: Props) {
+export default function HistoryViewer({ messages }: Props) {
   return (
     <div className="flex flex-col flex-1 items-center w-full max-w-[1200px] mx-auto h-screen pb-5 px-4">
       <div className="w-full flex justify-start pt-4 px-[20%]">

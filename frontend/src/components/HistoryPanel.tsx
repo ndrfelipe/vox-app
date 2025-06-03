@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-type Conversa = {
+export type Conversa = {
   id: number;
   data: string;
   resumo: string;
@@ -38,7 +38,7 @@ const conversasMock: Conversa[] = [
   },
 ];
 
-export default function HistoryPanel({ senderId } : {senderId: number} ) {
+export default function HistoryPanel() {
   const [conversaSelecionada, setConversaSelecionada] = useState<Conversa | null>(null);
 
 

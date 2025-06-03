@@ -5,13 +5,24 @@ import Sidebar, { SidebarItem } from "../../components/Sidebar";
 import Agendar from "../../components/Agendar";
 import Denuncia from "../../components/Denuncia";
 import HistoryViewer from "../../components/HistoryViewer";
+import type { Message } from "../../components/Chatbox";
+
 
 export default function Chatbot() {
   const [activeView, setActiveView] = useState("chat");
-  const [selectedHistory, setSelectedHistory] = useState(null);
+  const [selectedHistory, setSelectedHistory] = useState<Hist>({});
+
+ 
+
+  type Hist = {
+    id?: number,
+    title?: string,
+    date?: Date,
+    messages?:Message[],
+  };
 
   // Exemplo de históricos com título e data
-  const historicosMock = [
+  const historicosMock: Hist[] = [
     {
       id: 1,
       title: "Agendamento de Atendimento",
@@ -32,7 +43,7 @@ export default function Chatbot() {
     }
   ];
 
-  const handleHistoricoClick = (hist) => {
+  const handleHistoricoClick = (hist: Hist) => {
     setSelectedHistory(hist);
   };
 
@@ -43,7 +54,7 @@ export default function Chatbot() {
           <div className="p-4 overflow-y-auto h-full">
             <button
               onClick={() => {
-                setSelectedHistory(null);
+                setSelectedHistory({});
                 setActiveView("chat");
               }}
               className="
@@ -66,14 +77,14 @@ export default function Chatbot() {
             </button>
             <h2 className="text-lg font-semibold mb-4">Histórico de Conversas</h2>
             <ul className="space-y-2">
-              {historicosMock.map((hist) => (
+              {historicosMock.map((hist: Hist) => (
                 <li
                   key={hist.id}
                   className={`cursor-pointer bg-gray-100 rounded p-3 shadow-md hover:bg-gray-300 ${selectedHistory?.id === hist.id ? 'bg-gray-200' : ''}`}
                   onClick={() => handleHistoricoClick(hist)}
                 >
                   <div className="font-medium">{hist.title}</div>
-                  <div className="text-sm text-gray-600">{hist.date.toLocaleDateString()}</div>
+                  <div className="text-sm text-gray-600">{hist.date ? hist.date.toLocaleDateString() : "Data não disponível"}</div>
                 </li>
               ))}
             </ul>
@@ -85,7 +96,7 @@ export default function Chatbot() {
               text="Início"
               active={activeView === "chat"}
               onClick={() => {
-                setSelectedHistory(null);
+                setSelectedHistory({});
                 setActiveView("chat");
               }}
             />
@@ -120,10 +131,11 @@ export default function Chatbot() {
         <div className="flex-1">
           {selectedHistory ? (
             <HistoryViewer
-              messages={selectedHistory.messages}
-              title={selectedHistory.title}
-              onBack={() => setSelectedHistory(null)}
-            />
+            messages={selectedHistory.messages ?? []}
+            title={selectedHistory.title}
+            onBack={() => setSelectedHistory({})}
+/>
+
           ) : (
                 <div className="
                 m-5
