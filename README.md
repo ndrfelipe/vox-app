@@ -264,15 +264,17 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 <summary><strong>🏡 11. Landing Page</strong></summary>
 
 **Cartão:**  
-Como um cidadão em busca de atendimento, quero visualizar opções rápidas para facilitar minha interação com o chatbot.
+Como um usuário, quero visualizar uma página inicial do Vox,, para que eu possa entender o que é o Vox, quais são suas funcionalidade e como utilizar.
 
 **Conversação:**
-- Sugestões automáticas de perguntas/respostas.
-- Botões rápidos para temas mais acessados.
+- A landing page precisa ter uma sessão de “O Vox te ajuda com: “.
+- A landing page deve possuir um botão “Falar com o Vox” que redireciona o usuário para o Chatbot.
+- A landing page deve ter um botão na navbar que leva para a aba de contato com os desenvolvedores do projeto.
 
 **Critérios de Aceitação:**
-- O sistema exibe botões de ação para as interações?  
-- As sugestões de mensagens são úteis e contextuais?
+- A sessão de "O vox te ajuda com: " foi implementada?
+- Na landing page o botão "Falar com o Vox" redireciona o usuário para o chatbot?
+- Existe na Navbar um botão de contato que leva para o contato dos desenvolvedores do projeto?
 
 </details>
 
