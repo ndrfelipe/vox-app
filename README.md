@@ -308,7 +308,7 @@ Como um usuário, quero visualizar uma página inicial do Vox,, para que eu poss
   <img src="https://github.com/user-attachments/assets/933095ba-503c-49b3-9d98-336a1399fd6e" alt="Issues Bug Trackers" width="1000"/>
 </p>
 
-## ## :clapper: Acesso o nosso Screencast: [Acessar](https://www.youtube.com/watch?v=dYaQlzmpiYk)
+## ## :clapper: Acesso o nosso Screencast: [Acessar](https://youtu.be/qCgKqSYgljI)
 <p align="left">
   <img src="https://github.com/user-attachments/assets/e3f0b963-adae-4033-b7e8-4524974e73b2" alt="" width="500"/>
 </p>
