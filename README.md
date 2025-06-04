@@ -310,7 +310,7 @@ Como um usuário, quero visualizar uma página inicial do Vox,, para que eu poss
 
 ## ## :clapper: Acesso o nosso Screencast: [Acessar](https://youtu.be/qCgKqSYgljI)
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/e3f0b963-adae-4033-b7e8-4524974e73b2" alt="" width="500"/>
+  <img src="https://github.com/user-attachments/assets/1ce8d1f5-bd77-46c2-8b3f-df20b53749a5" alt="" width="500"/>
 </p>
 
 ## ## :clapper: Acesse o nosso deploy: [Acessar](https://vox-app-front.vercel.app/)
