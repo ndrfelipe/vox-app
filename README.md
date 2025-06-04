@@ -291,7 +291,7 @@ Como um usuário, quero visualizar uma página inicial do Vox,, para que eu poss
 
 ## 📌 Diagrama de Atividades
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b9713033-d453-4927-8220-ec58a0a9de87" alt="Diagrama de Atividades" width="300"/>
+  <img src="https://github.com/user-attachments/assets/4ae112ab-8490-4cc9-aecc-9ab58bfeb82b" alt="Diagrama de Atividades" width="300"/>
 </p>
 
 ## Programação em Par experimentada
