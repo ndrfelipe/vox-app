@@ -5,8 +5,9 @@
 O Vox possui um propósito simples, mas poderoso: facilitar o contato da população com a Polícia Civil de Pernambuco. Com uma abordagem moderna e acessível, o nosso ChatHuman oferece suporte direto e descomplicado para quem busca informações, deseja registrar um BO ou precisa de atendimento sem enfrentar longas filas.
 Mais que um assistente virtual, o Vox é um canal de comunicação eficiente e humanizado, pensado para aproximar o cidadão dos serviços públicos de forma prática, segura e acolhedora.
 <br><br>
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/bc86b950-1cd3-4f17-a4fd-c48ac259df7b" alt="Apresentação Vox" width="80%"/>
+  <img src="https://github.com/user-attachments/assets/b396134e-bb64-49d9-b446-d621d2f524a2" alt="Apresentação Vox" width="80%"/>
 </p>
 
 ## Sobre o Projeto
@@ -261,15 +262,14 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 
 ## Links Importantes
 ## 📂Trello (Gerenciamento do Projeto): [Acessar](https://trello.com/b/eKRNfaSC/projeto-accenture)
-![image](https://github.com/user-attachments/assets/a5c54354-b0f2-4b4d-952f-9d699a9675c5)
+
+![image](https://github.com/user-attachments/assets/bba3e84f-58fe-4f4b-badf-ba08b0070dcf)
 
 ## 📝Storyboards do Chatbot: [Acessar](https://www.figma.com/board/k2HWikIzhrbJz0XkXj7OHY/StoryBoard---Mo%C3%A3?node-id=0-1&p=f&t=Kovjw56RPPk2BRMt-0)
 ![image](https://github.com/user-attachments/assets/c9d53312-88d1-4a61-9fc0-93b944e81147)
 
 ## 💻Protótipos no Figma: [Acessar](https://www.figma.com/design/6TVVSwysXotM3phDzW9TeX/Vox?node-id=87-512&t=M8T2lAza9VNu4Jhf-0)
 ![image](https://github.com/user-attachments/assets/cb2dfbd6-c110-4402-bd69-d1b2c916e655)
-
-## :clapper: Acesso o nosso Screencast: [Acessar](https://youtu.be/VS1usrmIDBk)
 
 ## 📌 Diagrama de Atividades
 <p align="center">
@@ -290,19 +290,14 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
   <img src="https://github.com/user-attachments/assets/aee7bc27-45c7-4f0c-a4ce-4895e4c2ebdc" alt="Diagrama de Atividades" width="1000"/>
 </p>
 
-## Trello Atualizado
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/21889bc5-c82b-4190-8595-bf7652edd159" alt="Diagrama de Atividades" width="1000"/>
-</p>
-
 ## ## :clapper: Acesso o nosso Screencast: [Acessar](https://www.youtube.com/watch?v=dYaQlzmpiYk)
 <p align="left">
   <img src="https://github.com/user-attachments/assets/e3f0b963-adae-4033-b7e8-4524974e73b2" alt="" width="500"/>
 </p>
 
-## ## :clapper: Acesse o nosso deploy: [Acessar](https://vox-app-51bk.vercel.app/)
+## ## :clapper: Acesse o nosso deploy: [Acessar](https://vox-app-front.vercel.app/)
 <p align="left">
-  <img src="https://github.com/user-attachments/assets/c67ff1dd-2281-41fb-8faf-3c8b514f66a7" alt="" width="500"/>
+  <img src="https://github.com/user-attachments/assets/1cd627f0-5587-4abe-95b1-6127cec55376" alt="Apresentação Vox" width="80%"/>
 </p>
 
 
