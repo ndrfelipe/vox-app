@@ -260,6 +260,22 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 
 </details>
 
+<details>
+<summary><strong>🏡 11. Landing Page</strong></summary>
+
+**Cartão:**  
+Como um cidadão em busca de atendimento, quero visualizar opções rápidas para facilitar minha interação com o chatbot.
+
+**Conversação:**
+- Sugestões automáticas de perguntas/respostas.
+- Botões rápidos para temas mais acessados.
+
+**Critérios de Aceitação:**
+- O sistema exibe botões de ação para as interações?  
+- As sugestões de mensagens são úteis e contextuais?
+
+</details>
+
 ## Links Importantes
 ## 📂Trello (Gerenciamento do Projeto): [Acessar](https://trello.com/b/eKRNfaSC/projeto-accenture)
 
@@ -269,11 +285,11 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 ![image](https://github.com/user-attachments/assets/c9d53312-88d1-4a61-9fc0-93b944e81147)
 
 ## 💻Protótipos no Figma: [Acessar](https://www.figma.com/design/6TVVSwysXotM3phDzW9TeX/Vox?node-id=87-512&t=M8T2lAza9VNu4Jhf-0)
-![image](https://github.com/user-attachments/assets/cb2dfbd6-c110-4402-bd69-d1b2c916e655)
+![image](https://github.com/user-attachments/assets/36e46039-2af4-4bc2-8e9d-2a6e3f2d0c7c)
 
 ## 📌 Diagrama de Atividades
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7d0b2310-8115-417b-b1ee-8c38c6d2d3d5" alt="Diagrama de Atividades" width="300"/>
+  <img src="https://github.com/user-attachments/assets/b9713033-d453-4927-8220-ec58a0a9de87" alt="Diagrama de Atividades" width="300"/>
 </p>
 
 ## Programação em Par experimentada
@@ -287,7 +303,7 @@ Como um cidadão em busca de atendimento, quero visualizar opções rápidas par
 
 ## Issues
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/aee7bc27-45c7-4f0c-a4ce-4895e4c2ebdc" alt="Diagrama de Atividades" width="1000"/>
+  <img src="https://github.com/user-attachments/assets/933095ba-503c-49b3-9d98-336a1399fd6e" alt="Issues Bug Trackers" width="1000"/>
 </p>
 
 ## ## :clapper: Acesso o nosso Screencast: [Acessar](https://www.youtube.com/watch?v=dYaQlzmpiYk)
